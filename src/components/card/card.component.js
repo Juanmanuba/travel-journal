@@ -12,12 +12,8 @@ export default function Card(props) {
       />
       <div className={styles.info}>
         <div className={styles.location}>
-          <img
-            className={styles.icon}
-            alt="Airbnb-Experiences"
-            src={images.star}
-          />
-          <p>{props.location}</p>
+          <img className={styles.icon} alt="location-icon" src={images.icon} />
+          <h3>{props.location}</h3>
           <a href={props.googleMapsUrl}>View on Google Maps</a>
         </div>
         <h2>{props.title}</h2>
