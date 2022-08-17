@@ -6,6 +6,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbarContainer}>
       <img className="nav--logo" alt="airbnb-logo" src={images.logo} />
+      <p>My travel journal</p>
     </nav>
   );
 }

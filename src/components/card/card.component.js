@@ -3,39 +3,29 @@ import styles from './card.component.module.css';
 import { images } from '../../assets/images';
 
 export default function Card(props) {
-  let badgeText;
-  console.log(props.openSpots);
-  if (props.openSpots === 0) {
-    badgeText = 'SOLD OUT';
-  } else if (props.location === 'Online') {
-    badgeText = 'ONLINE';
-  }
-
   return (
     <div className={styles.cardContainer}>
-      {badgeText && <div className={styles.tag}>{badgeText}</div>}
       <img
-        className={styles.servicePic}
-        alt="Airbnb-Experiences"
-        src={props.coverImg}
+        className={styles.journeyPic}
+        alt="journeyImage"
+        src={props.imageUrl}
       />
-      <div className={styles.rating}>
-        <img
-          className={styles.star}
-          alt="Airbnb-Experiences"
-          src={images.star}
-        />
-        <p>
-          {props.stats.rating}{' '}
-          <span className={styles.gray}>
-            ({props.stats.reviewCount}) - {props.location}
-          </span>
-        </p>
+      <div className={styles.info}>
+        <div className={styles.location}>
+          <img
+            className={styles.icon}
+            alt="Airbnb-Experiences"
+            src={images.star}
+          />
+          <p>{props.location}</p>
+          <a href={props.googleMapsUrl}>View on Google Maps</a>
+        </div>
+        <h2>{props.title}</h2>
+        <h4>
+          {props.startDate} - {props.endDate}
+        </h4>
+        <p>{props.description}</p>
       </div>
-      <p>{props.title}</p>
-      <p>
-        <span className={styles.bold}>From ${props.price}</span> / person
-      </p>
     </div>
   );
 }

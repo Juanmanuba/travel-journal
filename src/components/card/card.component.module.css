@@ -1,8 +1,6 @@
 .cardContainer{
-  width: 280px;
   display: flex;
-  flex-flow: column;
-  position: relative;
+  
 }
 
 .rating {
@@ -19,7 +17,7 @@
   align-self: center;
 }
 
-.servicePic{
+.journeyPic{
   margin: 10px 20px;
   border-radius: 9px;
   height: 280px;
