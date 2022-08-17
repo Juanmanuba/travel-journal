@@ -1,3 +1,10 @@
+.cardContainer{
+  width: 280px;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
 .rating {
   display: flex;
   margin: 0 20px;
@@ -14,8 +21,35 @@
 
 .servicePic{
   margin: 10px 20px;
+  border-radius: 9px;
+  height: 280px;
+  width: 220px;
 }
 
 p {
   margin: 10px 20px;
+}
+
+.star {
+  margin-right: 3px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: #918E9B;
+}
+
+.tag{
+  position: absolute;
+  top: 15px;
+  left: 28px;
+  background-color: white;
+  padding: 3px 7px;
+  width: 93px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
 }
