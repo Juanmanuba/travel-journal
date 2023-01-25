@@ -1,6 +1,7 @@
-.cardContainer{
+.cardContainer {
   display: flex;
-  max-width: 800px;
+  gap: 40px;
+  max-width: 900px;
   margin: 50px auto;
   border-bottom-style: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
@@ -8,6 +9,7 @@
 .info {
   display: flex;
   flex-flow: column;
+  width: 600px;
 }
 
 .info > h2 {
@@ -28,14 +30,26 @@
   gap: 20px;
 }
 
-.journeyPic{
+.journeyPic {
   margin: 30px 20px 30px 50px;
   border-radius: 9px;
   height: 300px;
-  width: 220px;
+  width: 400px;
 }
 
 a {
-  color: #918E9B;
+  color: #918e9b;
 }
 
+@media screen and (max-width: 920px) {
+  .cardContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  .journeyPic,
+  .info {
+    width: 80%;
+  }
+}
